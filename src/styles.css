@@ -1,0 +1,58 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.addTask {
+  height: 2.5em;
+  width: 4em;
+  margin-left: 1em;
+}
+
+.task {
+  height: 2em;
+  width: 50%;
+}
+
+.formGroup {
+  display: flex;
+  margin: 3%;
+  border-style: dashed;
+  padding: 2%;
+}
+.text {
+  font-size: 1em;
+  margin-left: 1%;
+  width: 60%;
+}
+.update {
+  height: 2em;
+  width: 4em;
+  /* margin-left: 40%;
+  margin-top: 5%; */
+}
+
+.delete {
+  height: 2em;
+  width: 4em;
+  margin-left: 2%;
+}
+.toDo {
+  margin-top: 2em;
+  width: 45%;
+  height: 50%;
+  border-style: solid;
+  margin-left: 2%;
+  min-height: 200px;
+}
+.tiles {
+  display: flex;
+}
+.box {
+  display: flex;
+  margin-left: 35%;
+  margin-top: 2%;
+  width: 40%;
+  height: 20%;
+  padding: 1%;
+}
