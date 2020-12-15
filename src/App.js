@@ -5,20 +5,27 @@ export default function App() {
   const [text, setText] = useState("");
   const [list, setList] = useState([]);
   const [completed, setCompleted] = useState([]);
-
   const handleclick = () => {
     let task = text;
-    setList((prevList) => [...prevList, task]);
-    setText("");
+    if (task.length > 0) {
+      setList((prevList) => [...prevList, task]);
+      setText("");
+    }
   };
 
   const handleDelete = (index, type) => {
     if (type === "Completed") {
-      completed.splice(index, 1);
-      setCompleted(completed);
+      setCompleted((prev) => {
+        let temp = [...prev];
+        temp.splice(index, 1);
+        return [...temp];
+      });
     } else {
-      list.splice(index, 1);
-      setList(list);
+      setList((prev) => {
+        let temp = [...prev];
+        temp.splice(index, 1);
+        return [...temp];
+      });
     }
   };
 
@@ -37,6 +44,7 @@ export default function App() {
     completed.splice(valIndex, 1);
     setCompleted(completed);
   };
+  //let gList=[{ list:{list},type:"To Do",color:"#6FE5BC",update:{upList},delete:{handleDelete}},{list:{completed},type:"Completed",color:"#4FC5E5",update:{updateCompleted},delete:{handleDelete}}];
 
   console.log(list);
 
